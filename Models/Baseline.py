@@ -2,6 +2,7 @@ import pandas as pd
 import os
 
 # 1. Configurar la ruta relativa segura y cargar el dataset
+
 print("Cargando archivo Parquet...")
 base_dir = os.path.dirname(os.path.dirname(__file__)) 
 file_path = os.path.join(base_dir, 'Data', 'stuff_model_df.parquet')
