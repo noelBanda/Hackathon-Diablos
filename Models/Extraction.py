@@ -47,3 +47,8 @@ df_features = df.drop(columns=[col for col in columns_to_drop if col in df.colum
 print(f"Dimensión de Features originales: {df.shape}")
 print(f"Dimensión de Features limpios (X) para Stuff+: {df_features.shape}")
 print(f"Dimensión de Targets (y): {df_targets.shape}")
+
+# 5. Guardar la matriz con filtros
+output_features_path = os.path.join(base_dir, 'Data', 'features_clean.parquet')
+df_features.to_parquet(output_features_path, index=False)
+print(f"Matriz limpia guardada exitosamente en: {output_features_path}")
